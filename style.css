@@ -1,0 +1,42 @@
+:root{
+    --darkblue : hsl(243, 87%, 12%);
+    --blue2: hsl(238, 22%, 44%);
+    --blue1: hsl(224, 93%, 58%);
+    --blue: hsl(240, 75%, 98%);
+    --cyan :  hsl(170, 45%, 43%);
+    --grey : hsl(0, 0%, 75%);
+    --bold: 700;
+    --not_bold: 700;
+}
+*{
+    user-select: none;
+    background-color: var(--blue);
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+nav {
+    width: 100%;
+}
+nav ul{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: end;
+    margin: 2rem 2rem 0rem 2rem;
+    gap: 1rem;
+}
+nav img{
+}
+nav li + li{
+    align-self: center;
+    margin-right: 3rem;
+}
+nav li:first-child{
+    margin-right: auto;
+}
+@media all and (max-width){
+    nav img{
+        width: 100%;
+    }
+}
