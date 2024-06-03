@@ -2,6 +2,7 @@
     --darkblue : hsl(243, 87%, 12%);
     --blue2: hsl(238, 22%, 44%);
     --blue1: hsl(224, 93%, 58%);
+    --blue1-t: hsla(224, 93%, 58%, 0.757);
     --blue: hsl(240, 75%, 98%);
     --cyan :  hsl(170, 45%, 43%);
     --grey : hsl(0, 0%, 75%);
@@ -11,19 +12,21 @@
 *{
     user-select: none;
     background-color: var(--blue);
-    font-size: 16px;
     padding: 0;
     margin: 0;
     font-family: "Raleway", sans-serif;
+    color: var(--darkblue);
+    scroll-behavior: smooth;
 }
 nav {
     width: 100%;
+    font-size: 1rem;
 }
 nav ul{
     list-style-type: none;
     display: flex;
     justify-content: end;
-    margin: 3rem 2rem 0rem 2rem;
+    margin: 3rem 3rem 0rem 3rem;
     gap: 1rem;
 }
 nav a:not(#special){
@@ -47,21 +50,71 @@ nav img{
 }
 nav li + li{
     align-self: center;
-    padding-right: 1rem;
+    padding-right: 1.5rem;
 }
 nav li:first-child{
     margin-right: auto;
-    
 }
-@media all and (max-width: 425px){
-   nav ul{
-    margin: 3rem 0.9rem 0rem 0.9rem;
-   }
+#hero-section{
+    display: flex;
+    flex-direction: column;
+    margin: 6rem 2rem 0rem 2rem;
+    gap: 1.8rem;
+    text-align: center;
+} 
+#img-hero{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+#input-hero{
+    border: 1px solid var(--darkblue);
+    border-radius: 0.3rem;
+    padding: 0.8rem 0rem;
+}
+#input-hero::placeholder{
+   color: var(--grey);
+   font-size: 1rem;
+}
+#btn-hero{
+    padding: 0.8rem 0rem;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: var(--blue1);
+    color: var(--blue);
+}
+#btn-hero:hover{
+    background-color: var(--blue1-t);
+    cursor: pointer;
+}
+#btn-hero,#input-hero,.paragraph{
+    width: 95%;
+    align-self: center;
+}
+#part-2hero{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    margin: 0rem 1rem;
+    line-height: 2.5rem;
+}
+.paragraph{
+    line-height: 1.5rem;
+}
+.inpt-btn{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+@media screen and (max-width: 500px){
    nav li + li{
-    padding-right: 0.2rem;
+    padding-right: 0.02rem;
+    font-size: 14px;
+}
+nav ul{
+    margin: 3rem 1.2rem 0rem 1.2rem;
 }
 }
-@media all and (min-width: 600px){
+@media screen and (min-width: 1000px){
     nav ul{
         margin: 3rem 3rem 0rem 3rem;
         gap: 2rem;
@@ -70,6 +123,43 @@ nav li:first-child{
         width: 8rem;
     }
     nav li+li{
-        padding-right: 2rem;
+        padding-right: 3rem;
+        font-size: 1.2rem;
+    }
+    #hero-section{
+        flex-direction: row-reverse;
+        margin: 6rem 5rem 0rem 5rem;
+        gap: 6rem;
+        flex-basis: 100%;
+    }
+    #img-hero{
+        width: 20rem;
+        min-height: 100%;
+        margin: 0;
+        flex-basis: 50%;
+    }
+    #part-2hero{
+        overflow: none;
+        align-self : center;
+        flex-basis: 50%;
+        line-height:2.5rem;
+        text-align: start;
+        margin: 0rem;
+    }
+    .inpt-btn{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        flex-basis: 100%;
+    }
+    #btn-hero{
+        flex-basis: 30%;
+    }
+    #input-hero{
+     flex-basis: 70%;
+    }
+    .paragraph{
+        line-height: 1.8rem;
+        margin-left: -1.5rem;
     }
 }
