@@ -1,112 +1,136 @@
-:root{
-    --darkblue : hsl(243, 87%, 12%);
+:root {
+    --darkblue: hsl(243, 87%, 12%);
     --blue2: hsl(238, 22%, 44%);
     --blue1: hsl(224, 93%, 58%);
     --blue1-t: hsla(224, 93%, 58%, 0.757);
     --blue: hsl(240, 75%, 98%);
-    --cyan :  hsl(170, 45%, 43%);
-    --grey : hsl(0, 0%, 75%);
+    --cyan: hsl(170, 45%, 43%);
+    --grey: hsl(0, 0%, 75%);
     --bold: 700;
     --not_bold: 700;
 }
-*{
+
+* {
     user-select: none;
     padding: 0;
     margin: 0;
     font-family: "Raleway", sans-serif;
     scroll-behavior: smooth;
 }
-html{
+
+html {
     color: var(--darkblue);
 }
+
 nav {
     width: 100%;
     font-size: 1rem;
 }
-nav ul{
+
+nav ul {
     list-style-type: none;
     display: flex;
     justify-content: end;
     margin: 3rem 3rem 0rem 3rem;
     gap: 1rem;
 }
-nav a:not(#special){
+
+nav a:not(#special) {
     position: relative;
     text-decoration: none;
     color: inherit;
 }
-nav a:not(#special):hover{
- &&::after{
-    content: "";
-    position: absolute;
-    bottom: -0.2rem;
-    left: 0;
-    width: 100%;
-    height: 0.08rem;
-    background-color: var(--darkblue); 
+
+nav a:not(#special):hover {
+    &&::after {
+        content: "";
+        position: absolute;
+        bottom: -0.2rem;
+        left: 0;
+        width: 100%;
+        height: 0.08rem;
+        background-color: var(--darkblue);
+    }
+
 }
-}
-nav img{
+
+nav img {
     width: 6rem;
 }
-nav li + li{
+
+nav li+li {
     align-self: center;
     padding-right: 1.5rem;
 }
-nav li:first-child{
+
+nav li:first-child {
     margin-right: auto;
 }
-#hero-section{
+
+#hero-section {
     display: flex;
     flex-direction: column;
     padding: 5rem 2rem 5rem 2rem;
     gap: 1.8rem;
     text-align: center;
-} 
-#img-hero{
+}
+
+#img-hero {
     margin-left: 1rem;
     margin-right: 1rem;
 }
-#input-hero{
+
+#input-hero {
     border: 1px solid var(--darkblue);
     border-radius: 0.3rem;
     padding: 0.8rem 0rem;
 }
-#input-hero::placeholder{
-   color: var(--grey);
-   font-size: 1rem;
+
+#input-hero::placeholder {
+    color: var(--grey);
 }
-#btn-hero{
+
+#btn-hero {
     padding: 0.8rem 0rem;
     border: none;
     border-radius: 0.3rem;
     background-color: var(--blue1);
     color: var(--blue);
 }
-#btn-hero:hover{
+
+#btn-hero:hover {
     background-color: var(--blue1-t);
     cursor: pointer;
+    transition: 250ms;
+
 }
-#btn-hero,#input-hero,.paragraph{
+
+#btn-hero,
+#input-hero,
+.paragraph {
     width: 95%;
     align-self: center;
 }
-#part-2hero{
+
+#part-2hero {
     display: flex;
     flex-direction: column;
-    gap:1rem;
+    gap: 1rem;
     margin: 0rem 1rem;
     line-height: 2.5rem;
 }
-.paragraph{
+
+.paragraph {
     line-height: 1.5rem;
 }
-.inpt-btn{
+
+.inpt-btn {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
-#section-2-inside{
+
+#section-2-inside {
     background-color: var(--blue);
     display: flex;
     flex-direction: column;
@@ -115,30 +139,35 @@ nav li:first-child{
     gap: 1.8rem;
     text-align: center;
 }
-#section-2-part2{
+
+#section-2-part2 {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
     flex-basis: 50%;
-    
+
 }
-#section-2-part1{
+
+#section-2-part1 {
     max-width: 100%;
 }
-span{
+
+span {
     font-weight: var(--bold);
     margin-top: 3rem;
     margin-bottom: 1rem;
     font-size: 2rem;
 }
-#section-2-part2 > p{
+
+#section-2-part2>p {
     margin-left: -0.4rem;
     text-align: start;
-   font-size: 14px;
+    font-size: 1rem;
     line-height: 1.3rem;
 }
-.how{
+
+.how {
     color: var(--cyan);
     display: flex;
     gap: 0.5rem;
@@ -148,7 +177,8 @@ span{
     margin-top: 2rem;
     font-size: 14px;
 }
- .how:after{
+
+.how:after {
     content: "";
     position: absolute;
     bottom: -0.5rem;
@@ -156,39 +186,46 @@ span{
     width: 98%;
     height: 1.5px;
     background-color: var(--cyan);
-} 
-#card{
+}
+
+#card {
     display: flex;
     flex-direction: column;
     border-radius: 0.2rem;
     padding: 1.5rem 0.5rem 1.5rem 1.8rem;
     text-align: start;
-    font-size: 12px;
+    font-size: 0.8rem;
     margin-top: 2rem;
     background-color: white;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     margin: 1rem auto;
     width: 15rem;
 }
-#card-p{
+
+#card-p {
     padding: 0.5rem 0 1.5rem 0;
     line-height: 1.3rem;
 }
-#card-part2{
+
+#card-part2 {
     display: flex;
     font-size: 10px;
     gap: 0.5rem;
 }
-#card-part2  p{
+
+#card-part2 p {
     font-weight: bold;
 }
-#card-part2-text{
+
+#card-part2-text {
     align-self: center;
 }
-#avatar{
+
+#avatar {
     border-radius: 20px;
 }
-#before-footer{
+
+#before-footer {
     background-color: var(--blue2);
     color: var(--blue);
     display: flex;
@@ -197,10 +234,10 @@ span{
     gap: 2rem;
     color: white;
     text-align: center;
-    padding-bottom: 4rem;
     flex-basis: 100%;
 }
-#before-footer-inpt-btn > button{
+
+#before-footer-inpt-btn>button {
     padding: 0.6rem 0rem;
     width: 80%;
     border: none;
@@ -208,137 +245,246 @@ span{
     background-color: var(--blue1);
     color: var(--blue);
 }
-#before-footer-inpt-btn>button:hover{
+
+#before-footer-inpt-btn>button:hover {
     background-color: var(--blue1-t);
     cursor: pointer;
+    transition: 250ms;
 }
-#before-footer-inpt-btn>input{
+
+#before-footer-inpt-btn>input {
     width: 80%;
     padding: 0.6rem 0rem;
     border: 0.5px solid var(--darkblue);
     border-radius: 0.3rem;
 }
-#before-footer-inpt-btn{
+
+#before-footer-inpt-btn {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.8rem;
     flex-basis: 50%;
 }
-#before-footer-txt{
+
+#before-footer-txt {
     flex-basis: 50%;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
 }
-#before-footer-txt>div{
+
+#before-footer-txt>div {
     font-weight: bold;
     font-size: 1.5rem;
 }
-#section-2-part1{
+
+#section-2-part1 {
     flex-basis: 50%;
     justify-self: center;
 }
-@media screen and (max-width: 500px){
-   nav li + li{
-    padding-right: 0.02rem;
-    font-size: 14px;
+
+footer {
+    background-color: var(--darkblue);
+    color: white;
+    padding: 4rem 2rem 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
 }
-nav ul{
-    margin: 3rem 1.2rem 0rem 1.2rem;
+
+footer ul {
+    list-style-type: none;
 }
+
+footer li {
+    padding-bottom: 1.5rem;
 }
-@media screen and (min-width: 1000px){
-    #before-footer-txt{
+
+#list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#footer-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footer-1>img {
+    width: 12rem;
+    padding-bottom: 1rem;
+}
+
+#footer-1-p1,
+#footer-1-p2 {
+    display: flex;
+    gap: 1.5rem;
+}
+
+#icons {
+    text-align: center;
+}
+
+#icons>img:hover {
+    transform: translate(0, -2px);
+    cursor: pointer;
+    transition-duration: 200ms;
+}
+
+@media screen and (max-width: 500px) {
+    nav li+li {
+        padding-right: 0.02rem;
+        font-size: 14px;
+    }
+
+    nav ul {
+        margin: 3rem 1.2rem 0rem 1.2rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #section-2-part2>p {
+        margin-left: 0;
+    }
+
+    footer {
+        flex-direction: row;
+        padding: 5rem 5rem 4rem 5rem;
+        gap: 10rem;
+        flex-basis: 100%;
+        justify-content: space-between;
+    }
+
+    #icons {
+        gap: 2rem;
+
+    }
+
+    #footer-2 {
+        flex-direction: row;
+    }
+
+    #list {
+        flex-direction: row;
+        gap: 14rem;
+    }
+
+    #before-footer-txt {
         text-align: start;
         padding-left: 3rem;
     }
-    #before-footer-inpt-btn{
+
+    #before-footer-inpt-btn {
         align-items: start;
     }
-    #before-footer-inpt-btn>button{
+
+    #before-footer-inpt-btn>button {
         width: 40%;
     }
-    #before-footer{
+
+    #before-footer {
         gap: 10rem;
     }
-    #section-2-inside{
+
+    #section-2-inside {
         flex-direction: row-reverse;
         gap: 2rem;
         flex-basis: 100%;
         align-items: center;
     }
-    #section-2-part1{
+
+    #section-2-part1 {
         width: 20rem;
     }
-    #section-2-part2{
+
+    #section-2-part2 {
         overflow: none;
-        align-self : center;
+        align-self: center;
         flex-basis: 50%;
         text-align: start;
         margin: 0rem;
     }
-    nav ul{
+
+    nav ul {
         margin: 3rem 3rem 0rem 3rem;
         gap: 2rem;
     }
-    nav img{
+
+    nav img {
         width: 8rem;
     }
-    nav li+li{
+
+    nav li+li {
         padding-right: 3rem;
         font-size: 1.2rem;
     }
-    #hero-section{
+
+    #hero-section {
         flex-direction: row-reverse;
         padding: 5rem 5rem 5rem 5rem;
         gap: 6rem;
         flex-basis: 100%;
     }
-    #img-hero{
+
+    #img-hero {
         width: 20rem;
         max-height: 100%;
         margin: 0;
         flex-basis: 50%;
     }
-    #part-2hero{
+
+    #part-2hero {
         overflow: none;
-        align-self : center;
+        align-self: center;
         flex-basis: 50%;
-        line-height:2.5rem;
+        line-height: 2.5rem;
         text-align: start;
         margin: 0rem;
     }
-    .inpt-btn{
+
+    .inpt-btn {
         display: flex;
         flex-direction: row;
         gap: 2rem;
         flex-basis: 100%;
     }
-    #btn-hero{
+
+    #btn-hero {
         flex-basis: 30%;
     }
-    #input-hero{
-     flex-basis: 70%;
+
+    #input-hero {
+        flex-basis: 70%;
     }
-    .paragraph{
+
+    .paragraph {
         line-height: 1.8rem;
         margin-left: -1.5rem;
     }
-    #section-2-part2{
-     text-align: start;
-     
+
+    #section-2-part2 {
+        text-align: start;
+
     }
-    #card,.how{
+
+    #card,
+    .how {
         margin-left: 0;
     }
-    #section-2-inside{
+
+    #section-2-inside {
         padding: 5rem 5rem 5rem 5rem;
     }
-    #card{
+
+    #card {
         width: 80%;
     }
-    #before-footer{
+
+    #before-footer {
         flex-direction: row;
     }
 }
